@@ -1,0 +1,31 @@
+<!doctype html><meta charset=utf-8><title>收尾批次 16 页像素级验收</title>
+<style>body{font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;background:#0f1115;color:#e6e8ee;margin:0;padding:24px}
+h1{font-size:20px}h3{font-size:15px;color:#7fd1ff;margin:0 0 10px}
+.card{background:#171a21;border-radius:10px;padding:16px;margin-bottom:20px}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+figure{margin:0;flex:1 1 420px}img{width:100%;border:1px solid #2a2f3a;border-radius:6px}
+figcaption{font-size:12px;color:#8b93a7;margin-top:6px}
+.tag{color:#8b93a7;font-weight:400;font-size:12px;margin-left:8px}
+.rate{color:#ffd479;font-weight:400;font-size:12px;margin-left:8px}
+.summary{background:#171a21;border-radius:10px;padding:16px;margin-bottom:20px;font-size:13px;line-height:1.9;color:#c3c9d6}
+.summary b{color:#7fd1ff}</style>
+<h1>收尾批次：16 页像素级验收（130 断言全 PASS · 差异率 0.00% ~ 1.87%）</h1>
+<div class="summary">
+批次断言 <b>130 PASS / 0 FAIL</b>（console 错误 0）　·　全量回归 <b>753 PASS / 0 FAIL</b>　·　路由冒烟 <b>110 条 FAIL COUNT = 0</b><br>
+残留差异全部来自<b>中文字形抗锯齿</b>（原站 iOS 系统字体 vs 本地 Linux fallback），逐元素坐标已实测一致，属环境渲染差而非位置错。<br>
+其中 <b>unibtn</b> 字体补齐后，<code>webview</code> / <code>iart_index</code> 两页强差异像素<b>直接归零</b>。
+</div>
+<div class="card"><h3>活动中心 <span class="tag">activeSelected</span> <span class="rate">强差异 0.04%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_activeSelected.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_activeSelected.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>中签记录 <span class="tag">activity_record</span> <span class="rate">强差异 0.00%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_activity_record.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_activity_record.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>嗒嗒工会（工会首页） <span class="tag">union_tradeUnion</span> <span class="rate">强差异 1.87%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_union_tradeUnion.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_union_tradeUnion.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>工会排名 <span class="tag">union_unionRank</span> <span class="rate">强差异 0.33%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_union_unionRank.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_union_unionRank.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>工会成员排名 <span class="tag">union_userRank</span> <span class="rate">强差异 0.34%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_union_userRank.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_union_userRank.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>工会消息通知 <span class="tag">union_news</span> <span class="rate">强差异 0.18%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_union_news.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_union_news.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>认证结果 <span class="tag">certStatus</span> <span class="rate">强差异 0.57%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_certStatus.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_certStatus.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>分类管理 <span class="tag">categoryManager</span> <span class="rate">强差异 0.45%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_categoryManager.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_categoryManager.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>搜索 <span class="tag">market_search</span> <span class="rate">强差异 0.32%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_market_search.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_market_search.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>返佣概览 <span class="tag">rebate</span> <span class="rate">强差异 0.03%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_rebate.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_rebate.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>被邀请人清单 <span class="tag">rebate_invite</span> <span class="rate">强差异 0.52%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_rebate_invite.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_rebate_invite.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>返佣排行榜 <span class="tag">rebate_leader</span> <span class="rate">强差异 0.42%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_rebate_leader.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_rebate_leader.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>webview 壳页 <span class="tag">webview</span> <span class="rate">强差异 0.00%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_webview.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_webview.png"><figcaption>像素差异热力图</figcaption></figure></div></div>
+<div class="card"><h3>iArt超话 <span class="tag">iart_index</span> <span class="rate">强差异 0.00%</span></h3><div class="row"><figure><img src="p0-compare/cmp_m6_iart_index.png"><figcaption>并排对比（左=原站 / 右=复刻）</figcaption></figure><figure><img src="p0-compare/diff_m6_iart_index.png"><figcaption>像素差异热力图</figcaption></figure></div></div>

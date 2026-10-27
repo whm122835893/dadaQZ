@@ -1,0 +1,102 @@
+/* 原站字体（阿里普惠体，已按 GB2312 + ASCII 子集化为 woff2） */
+@font-face {
+  font-family: Alibaba-PuHuiTi-Regular;
+  src: url('/assets/font/Alibaba-PuHuiTi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Alibaba-PuHuiTi-Medium;
+  src: url('/assets/font/Alibaba-PuHuiTi-Medium.woff2') format('woff2');
+  font-weight: 500 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Alibaba-PuHuiTi-Bold;
+  src: url('/assets/font/Alibaba-PuHuiTi-Bold.woff2') format('woff2');
+  font-weight: 700 900;
+  font-display: swap;
+}
+/* 原站书法体（禹卫书法体黑），用于合成结果页标题等，已按用字子集化为 woff2 */
+@font-face {
+  font-family: YouSheBiaoTiHei;
+  src: url('/assets/font/YouSheBiaoTiHei.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+/* 原站 uni-app 内置图标字体 unibtn（streamiconfont 子集，含 \e601 返回箭头） */
+@font-face {
+  font-family: unibtn;
+  src: url('/assets/font/unibtn.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* 原站 uView 图标字体 https://at.alicdn.com/t/font_2225171_8kdcwk4po24.ttf */@font-face {
+  font-family: 'uview-icon';
+  src: url('/assets/font/uview-icon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.uview-icon {
+  font-family: 'uview-icon' !important;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 全局样式 —— 对齐原站黑金主题 */
+:root {
+  --tata-black: #000000;
+  --tata-bg: #0a0a0a;
+  --tata-gold: #c8a45c;
+  --tata-gold-light: #e8d5a3;
+  --tata-text: #ffffff;
+  --tata-text-sub: #9a9a9a;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  color: var(--tata-text);
+  /* 原站 H5 live 实测：html/body/uni-page 的 computed font-family 均为 "Times New Roman"
+     （原站虽声明了 Alibaba-PuHuiTi @font-face，但全局字体栈从未引用它们，字体始终 unloaded），
+     中文走系统 fallback。为像素级对齐原站实际渲染，全局字体栈首项改为 Times New Roman。 */
+  font-family: "Times New Roman", -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  overscroll-behavior-y: none;
+}
+
+img { display: block; border: 0; }
+a { text-decoration: none; color: inherit; }
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+.fade-enter-active, .fade-leave-active { transition: opacity .18s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+
+/* 通用裁切 */
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,32 @@
+# ---- 依赖 ----
+node_modules/
+.pnpm-store/
+
+# ---- 构建产物（可由源码重建，不入库）----
+frontend/dist/
+frontend/dist-pub/
+*.tsbuildinfo
+
+# ---- 环境变量与密钥（严禁入库）----
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ---- 日志与临时文件 ----
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ---- 临时验证产物 ----
+/tmp-verify/
+*.local
